@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 
 
-public class ListOfCutomersClass {
+public class ListOfCutomers_Class {
     public void populateTable(DefaultTableModel tableModel){
 
 Connection connection;
@@ -47,7 +47,9 @@ Connection connection;
        
        String address = rs.getString(12);
        
-       String tblData[] = {name, age, weight, gender, email_address, date, gym_time, cnic, mobile_no, amount, address  };
+       String fee_status = rs.getString(13);
+       
+       String tblData[] = {name, age, weight, gender, email_address, date, gym_time, cnic, mobile_no, amount, address, fee_status  };
        
        tableModel.addRow(tblData);
        

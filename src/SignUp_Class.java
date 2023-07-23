@@ -13,7 +13,7 @@ import java.sql.Statement;
  *
  * @author HAAN LAPTOP STORE
  */
-public class SignUpClass {
+public class SignUp_Class {
     private String email;
   private  String password;
     

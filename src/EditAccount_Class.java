@@ -11,7 +11,7 @@ import java.sql.Statement;
  *
  * @author HAAN LAPTOP STORE
  */
-public class EditAccountClass {
+public class EditAccount_Class {
      void UpdateData(String email, String password){
          
          String admin_id = "12";

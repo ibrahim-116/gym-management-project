@@ -465,7 +465,7 @@ public class UpdateAndDelete_Frame extends javax.swing.JFrame {
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
-       UpdateandDelete up = new UpdateandDelete();
+       UpdateandDelete_Class up = new UpdateandDelete_Class();
        String mobileNoFinding = txtSearch.getText();
        DefaultTableModel dtm = (DefaultTableModel) tblData.getModel();
        
@@ -603,7 +603,7 @@ public class UpdateAndDelete_Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultTableModel dtm = (DefaultTableModel) tblData.getModel();
         
-        UpdateandDelete up = new UpdateandDelete();
+        UpdateandDelete_Class up = new UpdateandDelete_Class();
                 
         String Name = txtName.getText();
         String Gender = txtGender.getText();
@@ -632,7 +632,7 @@ public class UpdateAndDelete_Frame extends javax.swing.JFrame {
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
-        UpdateandDelete up = new UpdateandDelete();
+        UpdateandDelete_Class up = new UpdateandDelete_Class();
         
         int sure = JOptionPane.showConfirmDialog(null,"Are you sure!");
         if(sure == 0){

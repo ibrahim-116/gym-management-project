@@ -54,14 +54,14 @@ public class ListOfCustomers_Frame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Name", "Age", "Weight", "Gender", "Email Address", "Date", "Gym Time", "CNIC no.", "Mobile no.", "Amount", "Address"
+                "Name", "Age", "Weight", "Gender", "Email Address", "Date", "Gym Time", "CNIC no.", "Mobile no.", "Amount", "Address", "Fee Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -108,7 +108,7 @@ public class ListOfCustomers_Frame extends javax.swing.JFrame {
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         
-        ListOfCutomersClass list = new ListOfCutomersClass();
+        ListOfCutomers_Class list = new ListOfCutomers_Class();
         DefaultTableModel jData = (DefaultTableModel) tblData.getModel();
         jData.setRowCount(0);
         list.populateTable(jData);

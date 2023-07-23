@@ -110,10 +110,10 @@ public class ForgetPassword_Frame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
        String email = txtEmail.getText();
-       ForgotPasswordClass p = new ForgotPasswordClass();
+       ForgotPassword_Class p = new ForgotPassword_Class();
        Boolean check = p.isEmailInDatabase(email);
        if (check){
-       new PasswordReset().setVisible(true);
+       new PasswordReset_Frame().setVisible(true);
        }
        else{
        jLabel3.setVisible(true);

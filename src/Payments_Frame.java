@@ -21,8 +21,9 @@ public class Payments_Frame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblData = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        Refresh = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        btnPaid = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImages(null);
@@ -39,14 +40,14 @@ public class Payments_Frame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Name", "Age", "Weight", "Gender ", "Email Address", "Date", "Gym_time", "CNIC No.", "Mobile No.", "Amount", "Address"
+                "Name", "Age", "Weight", "Gender ", "Email Address", "Date", "Gym_time", "CNIC No.", "Mobile No.", "Amount", "Address", "Fee Status"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -59,10 +60,10 @@ public class Payments_Frame extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblData);
 
-        jButton1.setText("Refresh");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Refresh.setText("Refresh");
+        Refresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                RefreshActionPerformed(evt);
             }
         });
 
@@ -73,21 +74,30 @@ public class Payments_Frame extends javax.swing.JFrame {
             }
         });
 
+        btnPaid.setText("Paid");
+        btnPaid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPaidActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(382, Short.MAX_VALUE)
+                .addContainerGap(383, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(414, 414, 414))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnPaid, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Refresh, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(58, 58, 58))))
         );
         layout.setVerticalGroup(
@@ -99,22 +109,23 @@ public class Payments_Frame extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addComponent(Refresh, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPaid, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RefreshActionPerformed
         // TODO add your handling code here:
-        ListOfCutomersClass list = new ListOfCutomersClass();
+        ListOfCutomers_Class list = new ListOfCutomers_Class();
         DefaultTableModel tableModel = (DefaultTableModel) tblData.getModel();
         tableModel.setRowCount(0);
         list.populateTable(tableModel);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_RefreshActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         try {
@@ -129,6 +140,25 @@ public class Payments_Frame extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void btnPaidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPaidActionPerformed
+        // TODO add your handling code here:
+        Payments_Class pay = new Payments_Class();
+        //get number of selected row
+        int row = tblData.getSelectedRow();
+        //if no row is selected show this msg
+        if (row == -1){
+        JOptionPane.showMessageDialog(null, "Please select a row");}
+        DefaultTableModel dtm = (DefaultTableModel) tblData.getModel();
+        String mobile_no = (String) dtm.getValueAt(row, 8);
+        pay.UpdateFeeStatus(mobile_no);
+        ListOfCutomers_Class list = new ListOfCutomers_Class();
+        DefaultTableModel tableModel = (DefaultTableModel) tblData.getModel();
+        tableModel.setRowCount(0);
+        list.populateTable(tableModel);
+        
+                
+    }//GEN-LAST:event_btnPaidActionPerformed
 
     
     public static void main(String args[]) {
@@ -165,7 +195,8 @@ public class Payments_Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Refresh;
+    private javax.swing.JButton btnPaid;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;

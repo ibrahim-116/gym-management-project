@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author HAAN LAPTOP STORE
  */
-public class ForgotPasswordClass {
+public class ForgotPassword_Class {
 boolean isEmailInDatabase(String email) {
         Connection connection = null;
         try {

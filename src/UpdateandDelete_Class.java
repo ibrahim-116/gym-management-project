@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author HAAN LAPTOP STORE
  */
-public class UpdateandDelete {
+public class UpdateandDelete_Class {
      
     private String name;
     private String gender;
@@ -266,7 +266,7 @@ String qry = "UPDATE customer_detail SET weight = '" + Weight + "', name = '" + 
        
             }
         catch (SQLException ex) {
-                Logger.getLogger(UpdateandDelete.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(UpdateandDelete_Class.class.getName()).log(Level.SEVERE, null, ex);
             }
             
            

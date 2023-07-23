@@ -170,7 +170,7 @@ public class Login_Frame extends javax.swing.JFrame {
 
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
         // TODO add your handling code here:
-        LoginClass login = new LoginClass();
+        Login_Class login = new Login_Class();
         
         //Getting email and password from DB
         String mail = login.getEmailfromDB();

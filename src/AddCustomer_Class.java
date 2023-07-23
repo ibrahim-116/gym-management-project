@@ -16,7 +16,7 @@ import java.util.logging.Logger;
  *
  * @author HAAN LAPTOP STORE
  */
-public class AddCustomer {
+public class AddCustomer_Class {
        private String Name = null;
      private String Age = null;
      private String Weight = null;
@@ -123,7 +123,7 @@ public class AddCustomer {
             statement.executeUpdate(qry);
            }
           catch (SQLException ex) {
-               Logger.getLogger(AddCustomer.class.getName()).log(Level.SEVERE, null, ex);
+               Logger.getLogger(AddCustomer_Class.class.getName()).log(Level.SEVERE, null, ex);
            }
         
     }

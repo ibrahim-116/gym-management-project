@@ -14,7 +14,7 @@ import java.sql.Statement;
  *
  * @author HAAN LAPTOP STORE
  */
-public class LoginClass {
+public class Login_Class {
     private String email;
     private String password;
 

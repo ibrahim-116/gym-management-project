@@ -8,12 +8,12 @@
  *
  * @author Ahmad Shehroz Raza
  */
-public class PasswordReset extends javax.swing.JFrame {
+public class PasswordReset_Frame extends javax.swing.JFrame {
 
     /**
      * Creates new form PasswordReset
      */
-    public PasswordReset() {
+    public PasswordReset_Frame() {
         initComponents();
     }
 
@@ -118,7 +118,7 @@ public class PasswordReset extends javax.swing.JFrame {
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
-        PasswordResetClass r = new PasswordResetClass();
+        PasswordReset_Class r = new PasswordReset_Class();
         String password = txtPassword.getText();
         String email = txtEmail.getText();
         
@@ -146,20 +146,21 @@ public class PasswordReset extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PasswordReset.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PasswordReset_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PasswordReset.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PasswordReset_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PasswordReset.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PasswordReset_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PasswordReset.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PasswordReset_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PasswordReset().setVisible(true);
+                new PasswordReset_Frame().setVisible(true);
             }
         });
     }

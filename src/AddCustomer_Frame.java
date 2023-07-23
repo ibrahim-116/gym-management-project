@@ -6,7 +6,7 @@ import java.util.Date;
 public class AddCustomer_Frame extends javax.swing.JFrame {
 
     /**
-     * Creates new form AddCustomer
+     * Creates new form AddCustomer_Class
      */
     public AddCustomer_Frame() {
         initComponents();
@@ -456,7 +456,7 @@ public class AddCustomer_Frame extends javax.swing.JFrame {
             String Address= txtAddress.getText();
             String CNIC  = txtCNIC.getText();
             String Amount  = txtAmount.getText();
-            AddCustomer add = new AddCustomer();
+            AddCustomer_Class add = new AddCustomer_Class();
             
             
             

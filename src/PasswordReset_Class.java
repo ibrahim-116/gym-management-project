@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  *
  * @author HAAN LAPTOP STORE
  */
-public class PasswordResetClass {
+public class PasswordReset_Class {
     public void setPassword(String password, String email) {
     Connection connection;
     try {

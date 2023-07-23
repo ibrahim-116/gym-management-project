@@ -188,7 +188,7 @@ public class EditAccount_Frame extends javax.swing.JFrame {
         // TODO add your handling code here:
         String email = txtEmail.getText();
         String password = txtPassword.getText();
-        EditAccountClass edit = new EditAccountClass();
+        EditAccount_Class edit = new EditAccount_Class();
         edit.UpdateData(email, password);
         JOptionPane.showMessageDialog(null, "Data updated successfully!");
        

@@ -163,7 +163,7 @@ public class SignUp_Frame extends javax.swing.JFrame {
             String email = txtEmail.getText();
             String password = txtPassword.getText();
             
-            SignUpClass sign = new SignUpClass();
+            SignUp_Class sign = new SignUp_Class();
             sign.insertSingup(email, password);
             
             setVisible(false);
