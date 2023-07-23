@@ -11,6 +11,7 @@ public class Payments_Frame extends javax.swing.JFrame {
     
     public Payments_Frame() {
         initComponents();
+//        
     }
 
     
