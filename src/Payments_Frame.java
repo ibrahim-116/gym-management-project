@@ -11,6 +11,11 @@ public class Payments_Frame extends javax.swing.JFrame {
     
     public Payments_Frame() {
         initComponents();
+           ListOfCutomers_Class list = new ListOfCutomers_Class();
+        DefaultTableModel tableModel = (DefaultTableModel) tblData.getModel();
+        tableModel.setRowCount(0);
+        list.populateTable(tableModel);
+        
     }
 
     

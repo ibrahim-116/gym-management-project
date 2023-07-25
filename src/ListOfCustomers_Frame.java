@@ -16,7 +16,13 @@ public class ListOfCustomers_Frame extends javax.swing.JFrame {
      * Creates new form ListOfCustomers
      */
     public ListOfCustomers_Frame() {
+        
         initComponents();
+          ListOfCutomers_Class list = new ListOfCutomers_Class();
+        DefaultTableModel jData = (DefaultTableModel) tblData.getModel();
+        jData.setRowCount(0);
+        list.populateTable(jData);
+        
     }
 
     /**
